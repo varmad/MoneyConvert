@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["srinivasavarma.d@gmail.com"]
 
   spec.summary       = %q{Convert one currency to another currency.}
-  # spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/varmad/MoneyConvert"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
