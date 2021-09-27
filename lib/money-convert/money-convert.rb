@@ -11,7 +11,7 @@ class MoneyConvert
   end
 
   def inspect
-    "#{amount} #{currency}"
+    "#{@amount} #{@currency}"
   end
 
   # Returns class object with converted currency values
@@ -117,11 +117,11 @@ class MoneyConvert
 
   # Returns converted currency
   def convert(to_currency)
-    (amount.to_i * @@to_currencies.fetch(to_currency)).round(2)
+    (@amount.to_i * @@to_currencies.fetch(to_currency, 1)).round(2)
   end
 
   # Checks wether the +to_currency+ is present in the given +@@to_curencies+ hash
   def validate_currency(to_currency)
-    @@to_currencies&.keys&.include?(to_currency)
+    @@to_currencies&.keys&.include?(to_currency) || to_currency == @@base_currency
   end
 end
