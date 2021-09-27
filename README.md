@@ -1,5 +1,7 @@
 # Money::Convert
 
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -21,14 +23,14 @@ Or install it yourself as:
 ```ruby
 # Configure the currency rates with respect to a base currency (here EUR):
  
-Money.conversion_rates('EUR', {
+MoneyConvert.conversion_rates('EUR', {
   'USD'     => 1.11,
   'Bitcoin' => 0.0047
 })
  
-# Instantiate money objects:
+# Instantiate money convert objects:
  
-fifty_eur = Money.new(50, 'EUR')
+fifty_eur = MoneyConvert.new(50, 'EUR')
  
 # Get amount and currency:
  
@@ -43,7 +45,7 @@ fifty_eur.convert_to('USD') # => 55.50 USD
  
 # Perform operations in different currencies:
  
-twenty_dollars = Money.new(20, 'USD')
+twenty_dollars = MoneyConvert.new(20, 'USD')
  
 # Arithmetics:
  
@@ -54,19 +56,19 @@ twenty_dollars * 3         # => 60 USD
  
 # Comparisons (also in different currencies):
  
-twenty_dollars == Money.new(20, 'USD') # => true
-twenty_dollars == Money.new(30, 'USD') # => false
+twenty_dollars == MoneyConvert.new(20, 'USD') # => true
+twenty_dollars == MoneyConvert.new(30, 'USD') # => false
  
 fifty_eur_in_usd = fifty_eur.convert_to('USD')
 fifty_eur_in_usd == fifty_eur          # => true
  
-twenty_dollars > Money.new(5, 'USD')   # => true
+twenty_dollars > MoneyConvert.new(5, 'USD')   # => true
 twenty_dollars < fifty_eur             # => true
 ```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/money-convert. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/money-convert/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/varmad/money-convert. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/money-convert/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License

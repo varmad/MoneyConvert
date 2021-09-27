@@ -13,15 +13,17 @@ twenty_dollars = MoneyConvert.new(20, 'USD')
 # puts fifty_eur / 2
 # puts twenty_dollars * 3
 
-puts twenty_dollars == MoneyConvert.new(20, 'USD') # => true
-puts twenty_dollars == MoneyConvert.new(30, 'USD') # => false
+# puts twenty_dollars == MoneyConvert.new(20, 'USD') # => true
+# puts twenty_dollars == MoneyConvert.new(30, 'USD') # => false
 
 puts fifty_eur_in_usd = fifty_eur.convert_to('USD')
-puts fifty_eur_in_usd == fifty_eur
+fifty_eur_in_usd == fifty_eur
 
-puts twenty_dollars > MoneyConvert.new(5, 'USD')   # => true
+puts fifty_eur_in_usd.amount
 
-puts twenty_dollars < fifty_eur
+# puts twenty_dollars > MoneyConvert.new(5, 'USD')   # => true
+
+# puts twenty_dollars < fifty_eur
 
 # puts fifty_eur.amount
 # puts fifty_eur.currency
